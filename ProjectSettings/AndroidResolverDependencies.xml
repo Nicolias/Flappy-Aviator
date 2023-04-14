@@ -13,8 +13,8 @@
     <package>com.appodeal.ads:advertising:3.0.2</package>
     <package>com.appodeal.ads:consent:3.0.2</package>
     <package>com.appodeal.ads:network:3.0.2</package>
-    <package>com.appsflyer:af-android-sdk:6.9.4</package>
-    <package>com.appsflyer:unity-wrapper:6.9.4</package>
+    <package>com.appsflyer:af-android-sdk:6.10.1</package>
+    <package>com.appsflyer:unity-wrapper:6.10.1</package>
     <package>com.explorestack:iab:1.4.1</package>
     <package>com.google.android.gms:play-services-ads-identifier:18.0.1</package>
     <package>com.google.android.gms:play-services-base:18.0.1</package>

@@ -35,8 +35,8 @@ dependencies {
     implementation 'com.appodeal.ads:advertising:3.0.2' // Assets/Appodeal/Editor/Dependencies/AppodealDependencies.xml:16
     implementation 'com.appodeal.ads:consent:3.0.2' // Assets/Appodeal/Editor/Dependencies/AppodealDependencies.xml:15
     implementation 'com.appodeal.ads:network:3.0.2' // Assets/Appodeal/Editor/Dependencies/AppodealDependencies.xml:14
-    implementation 'com.appsflyer:af-android-sdk:6.9.4' // Assets/AppsFlyer/Editor/AppsFlyerDependencies.xml:6
-    implementation 'com.appsflyer:unity-wrapper:6.9.4' // Assets/AppsFlyer/Editor/AppsFlyerDependencies.xml:8
+    implementation 'com.appsflyer:af-android-sdk:6.10.1' // Assets/AppsFlyer/Editor/AppsFlyerDependencies.xml:6
+    implementation 'com.appsflyer:unity-wrapper:6.10.1' // Assets/AppsFlyer/Editor/AppsFlyerDependencies.xml:8
     implementation 'com.explorestack:iab:1.4.1' // Assets/Appodeal/Editor/Dependencies/AppodealDependencies.xml:17
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1' // Assets/Appodeal/Editor/Dependencies/IronSourceDependencies.xml:11
     implementation 'com.google.android.gms:play-services-base:18.0.1' // Assets/Appodeal/Editor/Dependencies/IronSourceDependencies.xml:10
