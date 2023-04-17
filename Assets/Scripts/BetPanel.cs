@@ -18,16 +18,20 @@ namespace Bet_Window
         [SerializeField] private List<BetButton> _variationBets;
 
         private int _bet;
-        private PrizeSystem _prizeSystem;
+        private PrizeSystem _currentPrizeSystem;
 
         private StaticData _staticData;
         private GameStateSwitcher _gameStateSwitcher;
+        private AdsServise _adsServise;
+
+        private int _countGame;
 
         [Inject]
-        public void Construct(StaticData staticData, GameStateSwitcher gameStateSwitcher)
+        public void Construct(StaticData staticData, GameStateSwitcher gameStateSwitcher, AdsServise adsServise)
         {
             _staticData = staticData;
             _gameStateSwitcher = gameStateSwitcher;
+            _adsServise = adsServise;
         }
 
         private void OnEnable()
@@ -60,7 +64,7 @@ namespace Bet_Window
             betButton.Button.image.sprite = _staticData.BetRedFone;
 
             _bet = betButton.Bet;
-            _prizeSystem = betButton.PrizeSystem;
+            _currentPrizeSystem = betButton.PrizeSystem;
 
             _betText.text = betButton.Bet.ToString();
         }
@@ -73,9 +77,15 @@ namespace Bet_Window
 
         private void StartGame()
         {
+            _countGame++;
+
+            if (_countGame % 2 == 0)
+                if (_adsServise.ShowInterstationAds())
+                    return;
+
             if (_bet == 0 || _creditPanel.CreditsCount < _bet) return;
 
-            _gameStateSwitcher.StartGame(_bet, _prizeSystem);
+            _gameStateSwitcher.StartGame(_bet, _currentPrizeSystem);
         }
     }
 }

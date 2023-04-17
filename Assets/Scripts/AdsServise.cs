@@ -86,7 +86,18 @@ public class AdsServise : MonoBehaviour, IAppodealInitializationListener, IRewar
         StopAllCoroutines();
     }
 
-    public void ShowAdAndAccrue(int prize)
+    public bool ShowInterstationAds()
+    {
+        if (Appodeal.IsLoaded(AppodealAdType.Interstitial) && IsAdsBlocked == false)
+        {
+            Appodeal.Show(AppodealShowStyle.Interstitial);
+            return true;
+        }
+
+        return false;
+    }
+
+    private void ShowAdAndAccrue(int prize)
     {
         Appodeal.SetRewardedVideoCallbacks(this);
         _prize = prize;
@@ -102,7 +113,7 @@ public class AdsServise : MonoBehaviour, IAppodealInitializationListener, IRewar
         }
     }
 
-    public void BlockAdsOnPeriods(int days)
+    private void BlockAdsOnPeriods(int days)
     {
         IsAdsBlocked = true;
 
@@ -239,6 +250,7 @@ public class AdsServise : MonoBehaviour, IAppodealInitializationListener, IRewar
     {
 
     }
+
     #endregion
 }
 

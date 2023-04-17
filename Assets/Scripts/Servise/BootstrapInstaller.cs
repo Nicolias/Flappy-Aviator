@@ -10,6 +10,7 @@ public class BootstrapInstaller : MonoInstaller
     [SerializeField] private PointsCounter _winCounter;
     [SerializeField] private AudioServise _audioServise;
     [SerializeField] private CreditPanel _creditPanel;
+    [SerializeField] private AdsServise _adsServise;
 
     public override void InstallBindings()
     {
@@ -19,5 +20,6 @@ public class BootstrapInstaller : MonoInstaller
         Container.Bind(typeof(GameStateSwitcher)).FromComponentOn(_gameStateMachine.gameObject).AsSingle();
         Container.Bind<AudioServise>().FromComponentOn(_audioServise.gameObject).AsSingle();
         Container.Bind<CreditPanel>().FromComponentOn(_creditPanel.gameObject).AsSingle();
+        Container.Bind<AdsServise>().FromComponentOn(_adsServise.gameObject).AsSingle();
     }
 }

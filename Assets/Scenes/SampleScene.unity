@@ -680,7 +680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _menuPanel: {fileID: 1181007781881804475}
   _shopWindow: {fileID: 5861206309306374798}
-  _isPlaneSoundWasPlayed: 0
+  _audioServise: {fileID: 1410413561}
 --- !u!1 &151122850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,6 +2196,7 @@ MonoBehaviour:
   _winCounter: {fileID: 1160738202}
   _audioServise: {fileID: 1410413561}
   _creditPanel: {fileID: 1444845203}
+  _adsServise: {fileID: 948706506}
 --- !u!114 &549688260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2716,7 +2717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 50k.gold
+  productId: 50k.golds
   buttonType: 0
   consumePurchase: 1
   onTransactionsRestored:
@@ -3629,6 +3630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f3f647723fe817498fc6ecde379b813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _creditPanel: {fileID: 1444845203}
 --- !u!114 &984601600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10791,7 +10793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 20k.gold
+  productId: 20k.golds
   buttonType: 0
   consumePurchase: 1
   onTransactionsRestored:
@@ -11064,7 +11066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 200k.gold
+  productId: 200k.golds
   buttonType: 0
   consumePurchase: 1
   onTransactionsRestored:
@@ -11754,6 +11756,7 @@ GameObject:
   - component: {fileID: 5861206310579558334}
   - component: {fileID: 5861206310579558335}
   - component: {fileID: 5861206310579558332}
+  - component: {fileID: 5861206310579558336}
   m_Layer: 5
   m_Name: Buy Button
   m_TagString: Untagged
@@ -11863,6 +11866,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5861206310579558336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861206310579558306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: 30.days.without.ads
+  buttonType: 0
+  consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  titleText: {fileID: 0}
+  descriptionText: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!224 &5861206310592294336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12075,6 +12105,7 @@ GameObject:
   - component: {fileID: 5861206310708666416}
   - component: {fileID: 5861206310708666417}
   - component: {fileID: 5861206310708666422}
+  - component: {fileID: 5861206310708666424}
   m_Layer: 5
   m_Name: Buy Button
   m_TagString: Untagged
@@ -12146,6 +12177,33 @@ RectTransform:
   m_AnchoredPosition: {x: -0.10003662, y: 0.3050003}
   m_SizeDelta: {x: 0.73003006, y: -0.61}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5861206310708666424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861206310708666420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: 7.days.without.ads
+  buttonType: 0
+  consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  titleText: {fileID: 0}
+  descriptionText: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!114 &5861206310795328160
 MonoBehaviour:
   m_ObjectHideFlags: 0
