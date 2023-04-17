@@ -729,7 +729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8349224691358863340}
   - component: {fileID: 6344494415705254765}
-  - component: {fileID: 8033189194831049296}
+  - component: {fileID: 1849926887929413987}
   m_Layer: 10
   m_Name: Win Counter Trigger
   m_TagString: Untagged
@@ -802,7 +802,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 498.98276}
   m_EdgeRadius: 0
---- !u!114 &8033189194831049296
+--- !u!114 &1849926887929413987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6497736009427333186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612ad4d37baa84c42a4e6582c255f35a, type: 3}
+  m_Script: {fileID: 11500000, guid: 873b6fdbfaabcd549b2c6cef240bbd99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6508208688910379695

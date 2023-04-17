@@ -8,8 +8,10 @@ public class CreditPanel : MonoBehaviour
 
     [SerializeField] private TMP_Text _creditsPanelText;
 
-    private int _creditsCount;
+    private int _creditsCount = 15000;
     public int CreditsCount => _creditsCount;
+
+    private string _credits = "Credits";
 
     private void Awake()
     {
@@ -39,14 +41,15 @@ public class CreditPanel : MonoBehaviour
 
     private void LoadCoinsCount()
     {
-        _creditsCount = PlayerPrefs.HasKey("Credits") ? PlayerPrefs.GetInt("Credits") : 2000;
+        if (PlayerPrefs.HasKey(_credits))
+            _creditsCount = PlayerPrefs.GetInt(_credits);
 
         UpdateCreditsUIText();
     }
 
     private void SaveNewCoinsCount()
     {
-        PlayerPrefs.SetInt("Credits", _creditsCount);
+        PlayerPrefs.SetInt(_credits, _creditsCount);
 
         UpdateCreditsUIText();
         OnCreditChanged?.Invoke();

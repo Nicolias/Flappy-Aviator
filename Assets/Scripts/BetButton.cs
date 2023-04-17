@@ -10,10 +10,10 @@ namespace Bet_Window
         [SerializeField] private TMP_Text _betText;
 
         [SerializeField] private int _bet;
-        [SerializeField] private int _pointPerWinTrigger;
+        [SerializeField] private PrizeSystem _prizeSystem;
 
         public int Bet => _bet;
-        public int PointPerWinTrigger => _pointPerWinTrigger;
+        public PrizeSystem PrizeSystem => _prizeSystem;
         [field: SerializeField] public Button Button { get; private set; }
 
         private void OnEnable()

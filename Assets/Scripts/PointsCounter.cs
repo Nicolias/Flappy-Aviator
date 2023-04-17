@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class WinCounter : MonoBehaviour
+public class PointsCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text _scoreText;
     [SerializeField] private GameStateSwitcher _gameStateSwitcher;
@@ -25,7 +25,7 @@ public class WinCounter : MonoBehaviour
 
     public void AddScore()
     {
-        UpdateScore(_score + _gameStateSwitcher.PointPerWinTrigger);
+        UpdateScore(_score + _gameStateSwitcher.CurrentPrizeSystem.GetCurrentPointsPerStage());
     }
 
     private void ResetScore()

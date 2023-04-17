@@ -60,7 +60,7 @@ public class Plane : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<WinCounterTrigger>())
+        if (collision.GetComponent<PointsCounterTrigger>())
             return;
 
         _animator.SetTrigger("Dead");

@@ -17,7 +17,7 @@ namespace GameStateMachine
         [SerializeField] private BetPanel _betPanel;
         [SerializeField] private ObstaclesFactory _obstaclesFactory;
         [SerializeField] private LosePanel _losePanel;
-        [SerializeField] private WinCounter _winCounter;
+        [SerializeField] private PointsCounter _winCounter;
         [SerializeField] private CreditPanel _creditPanel;
         [SerializeField] private AudioServise _audioServise;
 
@@ -29,7 +29,7 @@ namespace GameStateMachine
         private int _currentBet;
         internal int CurrentBet => _currentBet;
         internal int CurrentScore => _winCounter.Score;
-        internal int PointPerWinTrigger { get; private set; }
+        public PrizeSystem CurrentPrizeSystem { get; private set; }
 
         [Inject]
         public void Construct(Plane plane)
@@ -49,23 +49,23 @@ namespace GameStateMachine
             SwitchState<GameBetState>();
         }
 
-        public void StartGame(int bet, int pointPerWinTrigger)
+        public void StartGame(int bet, PrizeSystem currentPrizeSystem)
         {
             _currentBet = bet;
-            PointPerWinTrigger = pointPerWinTrigger;
+            CurrentPrizeSystem = currentPrizeSystem;
             SwitchState<GamePlayState>();
             OnGameStarted?.Invoke();
         }
 
         public void Lose()
-        { 
+        {
             OnGameEnded?.Invoke();
             StartCoroutine(InvokeActionAfterSeconds(1f, () => { SwitchState<GameLoseState>(); }));
         }
 
         internal void SwitchState<T>() where T : GameBaseState
         {
-            if(CurrentState != null)
+            if (CurrentState != null)
                 CurrentState.Exit();
 
             var state = _allStates.FirstOrDefault(s => s is T);

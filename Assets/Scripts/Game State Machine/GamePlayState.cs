@@ -5,7 +5,9 @@
         private Plane _plane;
         private AudioServise _audioServise;
 
-        internal GamePlayState(Plane plane, AudioServise audioServise, GameStateSwitcher gameStateSwitcher) 
+        internal GamePlayState(Plane plane, 
+            AudioServise audioServise,
+            GameStateSwitcher gameStateSwitcher) 
             : base(gameStateSwitcher)
         {
             _audioServise = audioServise;

@@ -18,7 +18,7 @@ namespace Bet_Window
         [SerializeField] private List<BetButton> _variationBets;
 
         private int _bet;
-        private int _pointPerWinTrigger;
+        private PrizeSystem _prizeSystem;
 
         private StaticData _staticData;
         private GameStateSwitcher _gameStateSwitcher;
@@ -60,7 +60,7 @@ namespace Bet_Window
             betButton.Button.image.sprite = _staticData.BetRedFone;
 
             _bet = betButton.Bet;
-            _pointPerWinTrigger = betButton.PointPerWinTrigger;
+            _prizeSystem = betButton.PrizeSystem;
 
             _betText.text = betButton.Bet.ToString();
         }
@@ -75,7 +75,7 @@ namespace Bet_Window
         {
             if (_bet == 0 || _creditPanel.CreditsCount < _bet) return;
 
-            _gameStateSwitcher.StartGame(_bet, _pointPerWinTrigger);
+            _gameStateSwitcher.StartGame(_bet, _prizeSystem);
         }
     }
 }

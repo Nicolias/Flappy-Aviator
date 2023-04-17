@@ -1,12 +1,12 @@
 using UnityEngine;
 using Zenject;
 
-public class WinCounterTrigger : MonoBehaviour
+public class PointsCounterTrigger : MonoBehaviour
 {
-    private WinCounter _winCounter;
+    private PointsCounter _winCounter;
 
     [Inject]
-    public void Construct(WinCounter winCounter)
+    public void Construct(PointsCounter winCounter)
     {
         _winCounter = winCounter;
     }
