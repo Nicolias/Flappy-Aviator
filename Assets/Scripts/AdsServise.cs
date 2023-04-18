@@ -74,7 +74,7 @@ public class AdsServise : MonoBehaviour, IAppodealInitializationListener, IRewar
 
     private void OnEnable()
     {
-        _showAdsInShopButton.onClick.AddListener(() => ShowAdAndAccrue(100));
+        _showAdsInShopButton.onClick.AddListener(() => ShowAdAndAccrue(1000));
 
         StartCoroutine(BlockAdsStateUpdater());
     }
