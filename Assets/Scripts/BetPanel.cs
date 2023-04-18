@@ -79,7 +79,7 @@ namespace Bet_Window
         {
             _countGame++;
 
-            if (_countGame % 2 == 0)
+            if (_countGame % 4 == 0)
                 if (_adsServise.ShowInterstationAds())
                     return;
 
