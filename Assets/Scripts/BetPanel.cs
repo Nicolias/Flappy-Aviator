@@ -26,6 +26,8 @@ namespace Bet_Window
 
         private int _countGame;
 
+        private int _adsDisplayFrequense = 4;
+
         [Inject]
         public void Construct(StaticData staticData, GameStateSwitcher gameStateSwitcher, AdsServise adsServise)
         {
@@ -79,7 +81,9 @@ namespace Bet_Window
         {
             _countGame++;
 
-            if (_countGame % 4 == 0)
+            print(_countGame % _adsDisplayFrequense);
+
+            if (_countGame % _adsDisplayFrequense == 0)
                 if (_adsServise.ShowInterstationAds())
                     return;
 
