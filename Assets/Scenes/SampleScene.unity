@@ -3559,9 +3559,9 @@ MonoBehaviour:
   _betText: {fileID: 477457000}
   _bet: 2500
   _prizeSystem:
-    _basePointsByStage: 0
-    _pointsNeedForGetBonus: 0
-    _bonusPoints: 0
+    _basePointsByStage: 550
+    _pointsNeedForGetBonus: 3500
+    _bonusPoints: 1000
     _pointsCounter: {fileID: 1160738202}
   <Button>k__BackingField: {fileID: 971325205}
 --- !u!114 &971325205
@@ -4482,9 +4482,9 @@ MonoBehaviour:
   _betText: {fileID: 1540911826}
   _bet: 1000
   _prizeSystem:
-    _basePointsByStage: 0
-    _pointsNeedForGetBonus: 0
-    _bonusPoints: 0
+    _basePointsByStage: 220
+    _pointsNeedForGetBonus: 1700
+    _bonusPoints: 400
     _pointsCounter: {fileID: 1160738202}
   <Button>k__BackingField: {fileID: 1178867712}
 --- !u!114 &1178867712
@@ -6687,9 +6687,9 @@ MonoBehaviour:
   _betText: {fileID: 1336792212}
   _bet: 1500
   _prizeSystem:
-    _basePointsByStage: 0
-    _pointsNeedForGetBonus: 0
-    _bonusPoints: 0
+    _basePointsByStage: 330
+    _pointsNeedForGetBonus: 2300
+    _bonusPoints: 600
     _pointsCounter: {fileID: 1160738202}
   <Button>k__BackingField: {fileID: 1595961309}
 --- !u!114 &1595961309
@@ -7961,9 +7961,9 @@ MonoBehaviour:
   _betText: {fileID: 1714182678}
   _bet: 2000
   _prizeSystem:
-    _basePointsByStage: 0
-    _pointsNeedForGetBonus: 0
-    _bonusPoints: 0
+    _basePointsByStage: 440
+    _pointsNeedForGetBonus: 2800
+    _bonusPoints: 800
     _pointsCounter: {fileID: 1160738202}
   <Button>k__BackingField: {fileID: 2017245100}
 --- !u!114 &2017245100
@@ -11833,7 +11833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.034, y: 0}
   m_AnchorMax: {x: 0.27573922, y: 1}
-  m_AnchoredPosition: {x: -0.16003418, y: -8.230003}
+  m_AnchoredPosition: {x: -0.16003418, y: -8.230002}
   m_SizeDelta: {x: 0.119999886, y: 120.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5861206310579558306
