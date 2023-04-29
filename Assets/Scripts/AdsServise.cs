@@ -97,6 +97,16 @@ public class AdsServise : MonoBehaviour, IAppodealInitializationListener, IRewar
         return false;
     }
 
+    public void BlockAdsOnPeriods(int days)
+    {
+        IsAdsBlocked = true;
+
+        _lastBlockAdsDay = _lastBlockAdsDay.HasValue ? _lastBlockAdsDay.Value.AddDays(days) : DateTime.UtcNow.AddDays(days);
+        _nextCreditsAccureDay = DateTime.UtcNow;
+
+        StartCoroutine(BlockAdsStateUpdater());
+    }
+
     private void ShowAdAndAccrue(int prize)
     {
         Appodeal.SetRewardedVideoCallbacks(this);
@@ -111,16 +121,6 @@ public class AdsServise : MonoBehaviour, IAppodealInitializationListener, IRewar
         {
             Appodeal.Show(AppodealShowStyle.RewardedVideo);
         }
-    }
-
-    private void BlockAdsOnPeriods(int days)
-    {
-        IsAdsBlocked = true;
-
-        _lastBlockAdsDay = _lastBlockAdsDay.HasValue ? _lastBlockAdsDay.Value.AddDays(days) : DateTime.UtcNow.AddDays(days);
-        _nextCreditsAccureDay = DateTime.UtcNow;
-
-        StartCoroutine(BlockAdsStateUpdater());
     }
 
     private IEnumerator BlockAdsStateUpdater()
@@ -223,7 +223,8 @@ public class AdsServise : MonoBehaviour, IAppodealInitializationListener, IRewar
 
     public void OnBannerLoaded(int height, bool isPrecache)
     {
-        Appodeal.Show(AppodealShowStyle.BannerBottom);
+        if(IsAdsBlocked == false)
+            Appodeal.Show(AppodealShowStyle.BannerBottom);
     }
 
     public void OnBannerFailedToLoad()

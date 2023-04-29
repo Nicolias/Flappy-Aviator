@@ -1494,7 +1494,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.6
+  m_fontSize: 41.9
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1629,7 +1629,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.65
+  m_fontSize: 41.9
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3713,6 +3713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _creditPanel: {fileID: 1444845203}
+  _adsServise: {fileID: 948706506}
 --- !u!114 &984601600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3988,7 +3989,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.6
+  m_fontSize: 41.9
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5265,7 +5266,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.65
+  m_fontSize: 41.9
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5622,7 +5623,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.65
+  m_fontSize: 41.9
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7773,7 +7774,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.65
+  m_fontSize: 40.65
   m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11035,6 +11036,7 @@ GameObject:
   - component: {fileID: 5861206309381782832}
   - component: {fileID: 5861206309381782833}
   - component: {fileID: 5861206309381782838}
+  - component: {fileID: 5861206309381782840}
   m_Layer: 5
   m_Name: 30 Days Without Ads Button (2)
   m_TagString: Untagged
@@ -11109,6 +11111,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0.30004883, y: -0.13000488}
   m_SizeDelta: {x: 0.5999999, y: -2.1399994}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5861206309381782840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861206309381782836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: 30.days.without.ads
+  buttonType: 0
+  consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  titleText: {fileID: 0}
+  descriptionText: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!222 &5861206309412101589
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11533,6 +11562,7 @@ GameObject:
   - component: {fileID: 5861206309740197877}
   - component: {fileID: 5861206309740197882}
   - component: {fileID: 5861206309740197883}
+  - component: {fileID: 5861206309740197884}
   m_Layer: 5
   m_Name: 7 Days Without Ads Button (1)
   m_TagString: Untagged
@@ -11614,6 +11644,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5861206309740197884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861206309740197881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: 7.days.without.ads
+  buttonType: 0
+  consumePurchase: 1
+  onTransactionsRestored:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  titleText: {fileID: 0}
+  descriptionText: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!114 &5861206309781112372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11918,7 +11975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.034, y: 0}
   m_AnchorMax: {x: 0.27573922, y: 1}
-  m_AnchoredPosition: {x: -0.16003418, y: -8.230003}
+  m_AnchoredPosition: {x: -0.16003418, y: -8.230007}
   m_SizeDelta: {x: 0.119999886, y: 120.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5861206310579558306
@@ -12656,7 +12713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.035, y: 0.20081316}
   m_AnchorMax: {x: 0.8002073, y: 0.42400002}
-  m_AnchoredPosition: {x: -0.32995605, y: 0.47999573}
+  m_AnchoredPosition: {x: -0.32995605, y: 0.4799881}
   m_SizeDelta: {x: -0.84000015, y: 0.22000003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5861206310897177523

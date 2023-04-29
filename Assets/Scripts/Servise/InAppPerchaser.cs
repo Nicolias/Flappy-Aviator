@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
 public class InAppPerchaser : MonoBehaviour
 {
     [SerializeField] private CreditPanel _creditPanel;
+    [SerializeField] private AdsServise _adsServise;
+
     public void OnPurchaseCompleted(Product product)
     {
         switch (product.definition.id)
@@ -20,6 +20,14 @@ public class InAppPerchaser : MonoBehaviour
 
             case "200k.gold":
                 Accure(200000);
+                break;
+
+            case "7.days.without.ads":
+                _adsServise.BlockAdsOnPeriods(7);
+                break;
+
+            case "30.days.without.ads":
+                _adsServise.BlockAdsOnPeriods(30);
                 break;
         }
     }
